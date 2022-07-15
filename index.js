@@ -3,9 +3,7 @@ const fs = require('fs')
 
 const generateMarkdown = require('./utils/generateMarkdown.js')
 
-// TODO: Include packages needed for this application
 
-// TODO: Create an array of questions for user input
 const questions = [ 
 {
     type: 'input',
@@ -62,7 +60,7 @@ const questions = [
 
 
 
-// TODO: Create a function to write README file
+
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
         if (err) {
@@ -74,7 +72,7 @@ function writeToFile(fileName, data) {
   }
 
   
-// TODO: Create a function to initialize app
+
 async function init() {
     const response =  await inquirer.prompt(questions)
     const markdown = generateMarkdown(response)
@@ -82,5 +80,5 @@ async function init() {
 
     writeToFile('ReadMEExample.md', markdown)
 }
-// Function call to initialize app
+
 init();
