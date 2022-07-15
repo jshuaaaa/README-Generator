@@ -12,9 +12,9 @@ function generateMarkdown(response) {
 
   if (response.tests !== '') { TableOfContents += `
   * [Tests](#tests)` };
+//Sends links to the corresponding values
 
-
-  
+  // Below is the layout for the readME
   let markdownDraft = 
   `# ${response.title}
 
@@ -105,7 +105,7 @@ function generateMarkdown(response) {
 
 
 
-  
+  //Returns draft
   return markdownDraft;
 }
 

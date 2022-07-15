@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require('fs')
 
 const generateMarkdown = require('./utils/generateMarkdown.js')
-
+// Node dependencies
 
 const questions = [ 
 {
@@ -56,7 +56,7 @@ const questions = [
     name: 'license'
 }
 ];
-
+// Array of user questions for inquirer
 
 
 
@@ -70,7 +70,7 @@ function writeToFile(fileName, data) {
         console.log("Success! Your README.md file has been generated")
     });
   }
-
+//writes file function
   
 
 async function init() {
@@ -79,6 +79,7 @@ async function init() {
 
 
     writeToFile('ReadMEExample.md', markdown)
+    //Writes file based on markdown values
 }
-
+// Init is an async function so it runs after the prompt is finished
 init();
